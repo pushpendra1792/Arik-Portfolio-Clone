@@ -99,36 +99,46 @@ main {
   width: 100%;
   overflow: hidden;
   color: #DAC5A7;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  align-items: center;
+  opacity: 0.6;
   position: relative;
+}
+.view-2 .marquee::before, .view-2 .marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, #0E0E0E, transparent);
+  z-index: 1;
+}
+.view-2 .marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #0E0E0E, transparent);
+}
+.view-2 .marquee .marquee-content {
+  display: flex;
   animation: marquee 30s linear infinite;
 }
-.view-2 .marquee ::after {
-  content: "";
-  color: #DAC5A7;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-color: #0E0E0E;
-  top: 0;
-  left: 0;
-}
-.view-2 .marquee .text {
+.view-2 .marquee .marquee-content .text {
   display: flex;
   font-size: 3rem;
   font-weight: 500;
-  gap: 2rem;
+  gap: 4rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .view-3 {
   width: 100%;
   padding: 1rem 1rem;
-  display: flex;
   display: block;
   justify-content: center;
+}
+.view-3 .abouts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .view-3 .about-1 {
   width: 100%;
@@ -267,8 +277,7 @@ main {
   align-items: center;
   position: absolute;
   background: rgba(59, 53, 43, 0.3); /* Semi-transparent for blur visibility */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Main blur effect */
+  backdrop-filter: blur(10px); /* Main blur effect */
   color: #DAC5A7;
   bottom: 3%;
 }
@@ -297,8 +306,7 @@ main {
   align-items: center;
   position: absolute;
   background: rgba(59, 53, 43, 0.3); /* Semi-transparent for blur visibility */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Main blur effect */
+  backdrop-filter: blur(10px); /* Main blur effect */
   color: #DAC5A7;
   bottom: 3%;
 }
@@ -327,8 +335,7 @@ main {
   align-items: center;
   position: absolute;
   background: rgba(59, 53, 43, 0.3); /* Semi-transparent for blur visibility */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Main blur effect */
+  backdrop-filter: blur(10px); /* Main blur effect */
   color: #DAC5A7;
   bottom: 3%;
 }
@@ -357,8 +364,7 @@ main {
   align-items: center;
   position: absolute;
   background: rgba(59, 53, 43, 0.3); /* Semi-transparent for blur visibility */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* Main blur effect */
+  backdrop-filter: blur(10px); /* Main blur effect */
   color: #DAC5A7;
   bottom: 3%;
 }
@@ -812,7 +818,7 @@ main {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 @media (min-width: 1020px) {
