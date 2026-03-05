@@ -123,6 +123,10 @@ main {
                 z-index: 1;
             }
 
+            &::before {
+                left: 0;
+            }
+
             &::after {
                 right: 0;
                 background: linear-gradient(to left, #0E0E0E, transparent);
@@ -148,7 +152,6 @@ main {
     width: 100%;
     padding: 1rem 1rem;
     display: block;
-    justify-content: center;
 
     .abouts {
         width: 100%;

@@ -26,8 +26,7 @@ main {
 }
 .view-1 img {
   width: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .view-1 .h1 {
   font-size: 3.5rem;
@@ -111,6 +110,9 @@ main {
   background: linear-gradient(to right, #0E0E0E, transparent);
   z-index: 1;
 }
+.view-2 .marquee::before {
+  left: 0;
+}
 .view-2 .marquee::after {
   right: 0;
   background: linear-gradient(to left, #0E0E0E, transparent);
@@ -132,7 +134,6 @@ main {
   width: 100%;
   padding: 1rem 1rem;
   display: block;
-  justify-content: center;
 }
 .view-3 .abouts {
   width: 100%;
@@ -260,8 +261,7 @@ main {
 .view-4 .works .work-1 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 2px solid #343230;
   border-radius: 0.3rem;
 }
@@ -289,8 +289,7 @@ main {
 .view-4 .works .work-2 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 2px solid #343230;
   border-radius: 0.3rem;
 }
@@ -318,8 +317,7 @@ main {
 .view-4 .works .work-3 img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 2px solid #343230;
   border-radius: 0.3rem;
 }
@@ -349,8 +347,7 @@ main {
   height: 100%;
   border: 2px solid #343230;
   border-radius: 0.3rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .view-4 .works .work-4 .work-solar {
   width: 90%;
@@ -1116,4 +1113,6 @@ main {
     color: #A89881;
     font-size: 0.9rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
